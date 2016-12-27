@@ -5,7 +5,9 @@ import { Component, OnInit } from '@angular/core';
   template: require('./about.component.html')
 })
 export class AboutComponent implements OnInit {
-  constructor() { }
+  constructor() {
+
+  }
 
   ngOnInit() { }
 }
