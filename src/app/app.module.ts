@@ -5,6 +5,7 @@ import {HttpModule} from "@angular/http";
 import {AppRoutingModule} from "./app.routing";
 import {HomeModule} from "./features/home/home.module";
 import {CoreModule} from "./core/core.module";
+import {AppConfiguratorModule} from "./configurator/configurator.module";
 // Components
 import {AppComponent} from "./app.component";
 
@@ -13,6 +14,7 @@ import {AppComponent} from "./app.component";
         BrowserModule,
         HttpModule,
         CoreModule,
+        AppConfiguratorModule,
 
         AppRoutingModule,
         HomeModule
