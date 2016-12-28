@@ -5,13 +5,14 @@ import {HomeComponent} from './home.component';
 
 const routes: Routes = [
     {
-        path: 'home',
-        component: HomeComponent,
-        data: {
-            access: {
-                role: 'user'
-            }
-        }
+        path: '',
+        component: HomeComponent
+    },
+    // handle all /app/home/[unmatched] routes
+    {
+        path: '**',
+        redirectTo: '',
+        pathMatch: 'full'
     }
 ];
 

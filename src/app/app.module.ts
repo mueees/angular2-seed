@@ -5,23 +5,22 @@ import {HttpModule} from "@angular/http";
 import {AppRoutingModule} from "./app.routing";
 import {HomeModule} from "./features/home/home.module";
 import {CoreModule} from "./core/core.module";
-import {AppConfiguratorModule} from "./configurator/configurator.module";
 // Components
 import {AppComponent} from "./app.component";
+import {BaseComponent} from "./base.component";
 
 @NgModule({
     imports: [
         BrowserModule,
         HttpModule,
         CoreModule,
-        AppConfiguratorModule,
-
         AppRoutingModule,
         HomeModule
     ],
-
-    providers: [],
-    declarations: [AppComponent],
+    declarations: [
+        AppComponent,
+        BaseComponent
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {

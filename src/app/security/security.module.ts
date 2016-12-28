@@ -1,11 +1,11 @@
 import {NgModule} from "@angular/core";
 
-import {Security} from './security.service';
+import {AuthenticationService} from './authentication.service';
 
 @NgModule({
     imports: [],
 
-    providers: [Security],
+    providers: [AuthenticationService],
     declarations: []
 })
 export class SecurityModule {
