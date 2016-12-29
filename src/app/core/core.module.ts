@@ -1,11 +1,7 @@
 import {NgModule, Optional, SkipSelf} from "@angular/core";
 
-import {SecurityModule} from '../security/security.module';
-
 @NgModule({
-    imports: [
-        SecurityModule
-    ],
+    imports: [],
 
     providers: [],
     declarations: []
