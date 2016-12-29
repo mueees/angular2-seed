@@ -3,8 +3,8 @@ import {BrowserModule} from "@angular/platform-browser";
 import {HttpModule} from "@angular/http";
 // Modules
 import {AppRoutingModule} from "./app.routing";
-import {HomeModule} from "./features/home/home.module";
-import {CoreModule} from "./core/core.module";
+import {HomeModule} from "./features/home";
+import {CoreModule} from "./core";
 // Components
 import {AppComponent} from "./app.component";
 import {BaseComponent} from "./base.component";
