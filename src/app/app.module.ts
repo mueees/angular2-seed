@@ -3,7 +3,7 @@ import {BrowserModule} from "@angular/platform-browser";
 // Components
 import {AppComponent} from "./app.component";
 import {AppRoutingModule} from "./app.routing";
-import {HomeComponent} from "./home.component";
+import {HomeComponent} from "./component/home.component";
 
 @NgModule({
     imports: [
