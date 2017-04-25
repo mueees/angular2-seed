@@ -2,9 +2,11 @@
 let path = require('path');
 
 module.exports = {
-    entry: require('./webpack/entry'),
-
-    context: path.join(process.cwd(), 'src'),
+    entry: {
+        'polyfills': './src/polyfills.ts',
+        'vendor': './src/vendor.ts',
+        'app': './src/main.jit.ts'
+    },
 
     output: require('./webpack/output'),
 
@@ -18,5 +20,5 @@ module.exports = {
 
     stats: 'errors-only',
 
-    devtool: 'source-map'
+    devtool: 'cheap-module-source-map'
 };

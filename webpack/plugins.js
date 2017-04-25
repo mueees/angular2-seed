@@ -19,10 +19,20 @@ module.exports = [
     }),
 
     new HtmlWebpackPlugin({
-        template: './index.html'
+        template: './src/index.html'
     }),
 
     new ExtractTextPlugin("styles.css"),
 
-    new webpack.NoEmitOnErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin(),
+
+    new webpack.optimize.UglifyJsPlugin({
+        compress: {
+            warnings: false
+        },
+        output: {
+            comments: false
+        },
+        sourceMap: true
+    })
 ];

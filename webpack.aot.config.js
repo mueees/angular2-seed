@@ -2,12 +2,13 @@
 let path = require('path');
 let webpack = require('webpack');
 let ngtools = require('@ngtools/webpack');
-let UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
-    entry: require('./webpack/entry'),
-
-    context: path.join(process.cwd(), 'src'),
+    entry: {
+        'app': './src/main.aot.ts',
+        'polyfills': './src/polyfills.ts',
+        'vendor': './src/vendor.ts'
+    },
 
     output: require('./webpack/output'),
 
@@ -15,7 +16,8 @@ module.exports = {
 
     plugins: require('./webpack/plugins').concat([
         new ngtools.AotPlugin({
-            tsConfigPath: path.join(process.cwd(), 'tsconfig.json')
+            tsConfigPath: path.join(process.cwd(), 'tsconfig.json'),
+            entryModule: path.join(process.cwd(), '/src/app/app.module#AppModule')
         })
     ]),
 
