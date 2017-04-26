@@ -18,6 +18,16 @@ module.exports = {
         new ngtools.AotPlugin({
             tsConfigPath: path.join(process.cwd(), 'tsconfig.json'),
             entryModule: path.join(process.cwd(), '/src/app/app.module#AppModule')
+        }),
+
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false
+            },
+            output: {
+                comments: false
+            },
+            sourceMap: true
         })
     ]),
 

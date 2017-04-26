@@ -6,8 +6,7 @@
     "profiling": "rimraf dist && webpack --json --profile --config webpack.aot.config.js > profile.json",
     "start": "webpack-dev-server --config webpack.jit.config.js --progress",
     "build:jit": "rimraf dist && webpack --config webpack.jit.config.js",
-    "build:aot": "rimraf dist && webpack --config webpack.aot.config.js",
-    "ngc": "ngc"
+    "build:aot": "rimraf dist && webpack --config webpack.aot.config.js"
   },
   "license": "MIT",
   "dependencies": {
