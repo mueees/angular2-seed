@@ -8,7 +8,7 @@ module.exports = [
         test: /\.html$/,
         use: [
             {
-                loader: 'raw-loader'
+                loader: 'html-loader'
             }
         ]
     },
@@ -36,5 +36,16 @@ module.exports = [
 
             fallback: 'style-loader'
         })
+    },
+    {
+        test: /\.(svg|jpg|png|gif|ttf|eot|woff|woff2)$/,
+        use: [
+            {
+                loader: 'file-loader',
+                options: {
+                    name: '[path][name].[ext]'
+                }
+            }
+        ]
     }
 ];
