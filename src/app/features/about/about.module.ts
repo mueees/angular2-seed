@@ -1,7 +1,7 @@
-import {NgModule} from "@angular/core";
+import { NgModule } from '@angular/core';
 // Components
-import {AboutComponent} from "./about.component";
-import {AboutRoutingModule} from "./about.routing";
+import { AboutComponent } from './about.component';
+import { AboutRoutingModule } from './about.routing';
 
 @NgModule({
     imports: [

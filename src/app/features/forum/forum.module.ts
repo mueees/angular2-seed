@@ -1,6 +1,6 @@
-import {NgModule} from "@angular/core";
+import { NgModule } from '@angular/core';
 // Components
-import {ForumComponent} from "./forum.component";
+import { ForumComponent } from './forum.component';
 
 @NgModule({
     imports: [],

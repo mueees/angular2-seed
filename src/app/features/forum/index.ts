@@ -1,2 +1,2 @@
-export {ForumModule} from './forum.module';
-export {forumRoutes} from './forum.routes';
+export { ForumModule } from './forum.module';
+export { forumRoutes } from './forum.routes';

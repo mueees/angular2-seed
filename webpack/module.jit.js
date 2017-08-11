@@ -7,9 +7,13 @@ module.exports = {
         {
             test: /\.ts$/,
             use: [
-                'awesome-typescript-loader',
-                'angular2-template-loader'
-            ]
+                {
+                    loader: '@ngtools/webpack',
+                    options: {
+                        tsConfigPath: 'tsconfig.json'
+                    }
+                }
+            ],
         }
     ].concat(commonRules)
 };

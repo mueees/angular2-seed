@@ -1,7 +1,7 @@
-import {Component} from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: 'forum.component.html'
+    templateUrl: './forum.component.html'
 })
 export class ForumComponent {
 }

@@ -3,7 +3,7 @@
 let webpack = require('webpack');
 let path = require('path');
 let HtmlWebpackPlugin = require('html-webpack-plugin');
-let ExtractTextPlugin = require("extract-text-webpack-plugin");
+let ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = [
     new webpack.ProgressPlugin(),
@@ -22,7 +22,7 @@ module.exports = [
         template: './src/index.html'
     }),
 
-    new ExtractTextPlugin("styles.css"),
+    new ExtractTextPlugin('styles.css'),
 
     new webpack.NoEmitOnErrorsPlugin()
 ];
