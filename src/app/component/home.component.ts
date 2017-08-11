@@ -1,13 +1,21 @@
-import {Component, OnInit} from "@angular/core";
+import { Component, Input, OnInit } from '@angular/core';
+import angular from 'angular';
+import { downgradeComponent } from '@angular/upgrade/static';
 
 @Component({
-    templateUrl: 'home.component.html',
-    styleUrls: ['home.component.scss']
+    selector: 'home',
+    templateUrl: 'home.component.html'
 })
 export class HomeComponent implements OnInit {
-    constructor() {
-    }
+    @Input() configuration;
 
     ngOnInit() {
+        console.log(this.configuration);
     }
 }
+
+angular.module('angular1')
+    .directive(
+        'home',
+        downgradeComponent({component: HomeComponent}) as angular.IDirectiveFactory
+    );

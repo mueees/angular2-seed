@@ -1,24 +1,26 @@
-import {NgModule} from "@angular/core";
-import {BrowserModule} from "@angular/platform-browser";
-import {AboutModule} from "./features/about/about.module";
+import { NgModule } from '@angular/core';
+import { UpgradeModule } from '@angular/upgrade/static';
+import { BrowserModule } from '@angular/platform-browser';
 // Components
-import {AppComponent} from "./app.component";
-import {AppRoutingModule} from "./app.routing";
-import {HomeComponent} from "./component/home.component";
-import {ForumModule} from "./features/forum";
+import { HomeComponent } from './component/home.component';
 
 @NgModule({
     imports: [
-        BrowserModule,
-        AboutModule,
-        ForumModule,
-        AppRoutingModule
+        UpgradeModule,
+        BrowserModule
     ],
     declarations: [
-        HomeComponent,
-        AppComponent
+        HomeComponent
     ],
-    bootstrap: [AppComponent]
+    entryComponents: [
+        HomeComponent
+    ]
 })
 export class AppModule {
+    constructor(private upgrade: UpgradeModule) {
+    }
+
+    ngDoBootstrap() {
+        this.upgrade.bootstrap(document.body, ['angular1'], {});
+    }
 }

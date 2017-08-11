@@ -10,8 +10,10 @@
   },
   "license": "MIT",
   "dependencies": {
+    "angular": "1.4.7",
     "@angular/common": "4.0.0",
     "@angular/compiler": "4.0.0",
+    "@angular/upgrade": "4.0.0",
     "@angular/core": "4.0.0",
     "@angular/forms": "4.0.0",
     "@angular/http": "4.0.0",
